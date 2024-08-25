@@ -1,0 +1,62 @@
+BOM-Browser Object Model 
+  |
+ DOM-Document Object M0del
+
+Browser APIs:
+  prompt
+  Alert
+  confirm
+  Window.print()
+
+
+Window Dimensions and scrolling functionality:
+Content area after clicking inspect:
+Window.innerHeight
+Window.innerWidth
+browser area:
+Window.outerWidth
+Window.outerHeight
+
+
+Window.location.reload
+ 
+
+Local Storage
+Lifetime: Data stays stored even if you close and reopen your browser.
+Scope: Available across all tabs and windows of the same browser (as long as they’re on the same website).
+Use: Good for saving things you want to keep for a long time, like user settings or preferences.
+Example: Saving your theme choice for a website.
+// Storing data
+localStorage.setItem('username', 'JohnDoe');
+
+// Retrieving data
+const username = localStorage.getItem('username');
+console.log(username); // Output: JohnDoe
+
+// Removing data
+localStorage.removeItem('username');
+
+// Clearing all data
+localStorage.clear();
+
+
+Session Storage
+Lifetime: Data is cleared when you close the tab or window.
+Scope: Only available in the tab or window where it was created (not shared with other tabs or windows).
+Use: Ideal for data that only needs to last for the current browsing session, like temporary form inputs.
+Example: Keeping track of items in a shopping cart while you’re browsing.
+// Storing data
+sessionStorage.setItem('sessionId', '123456');
+
+// Retrieving data
+const sessionId = sessionStorage.getItem('sessionId');
+console.log(sessionId); // Output: 123456
+
+// Removing data
+sessionStorage.removeItem('sessionId');
+
+// Clearing all data
+sessionStorage.clear();
+
+
+

@@ -1,0 +1,46 @@
+Angular framework-Combined html,css,javascript.Build by Facebook.No need to import
+libraries.
+React framework-Same as Angular .Build by Google.Need to import libraries.
+
+div-It is a container to group other tags and elements.
+
+CSS:
+properties:width,height,background-color
+value:100px,green
+
+Block Elements: These elements take up the full available horizontal width within their container and start on a new line before and after. Examples include div, p, h1-h6, and form.
+
+Inline Elements: These elements only take up the horizontal space needed for their content and sit on the same line with other inline elements. They don't start a new line. Examples include span, strong, em, and a.
+
+Inline-block Elements: These elements combine characteristics of both block and inline elements. They behave like inline elements in terms of flowing with surrounding text, but they can also have a width and height set, similar to block elements. An example is img.
+
+Here's an example to illustrate the difference:
+
+HTML
+<div style="background-color: lightblue; padding: 10px;">  This is a block element. It will take up the full width available within this container (div) and start on a new line.
+  <br> <span style="background-color: yellow; padding: 5px;">  This is an inline element. It will only take up the space needed for the text and sit on the same line with other inline elements.
+  </span>
+  <br>
+  <img src="image.jpg" alt="Image description" style="width: 150px
+Selectors:id,class,element-html tags
+id names should be unique to whole html.
+class names is not needed to be unique.
+The div is a block element with a light blue background. It fills the available width and starts on a new line.
+The span with yellow background is an inline element. It only takes up the space needed for the text and sits on the same line as the following content.
+The img element is inline-block. It displays the image with a set width and height while still flowing with the surrounding text.
+
+
+Attributes (Data Definitions): Define characteristics of an element without
+ directly affecting its presentation.Ex:src,alt,class,id
+Properties (Dynamic Behaviors): Control the dynamic presentation and 
+behavior of an element.Ex:width,height
+
+
+priority chart:
+Inline Styles: Styles defined directly within the HTML element using the style attribute.
+!important Flag: Used within any CSS rule to override all other styles, regardless of specificity (use with caution!).
+ID Selectors (Internal/External): Styles targeting elements by their unique ID (e.g., #my-element).
+Class Selectors (Internal/External): Styles targeting elements by class (e.g., .my-class).
+Element Selectors: Styles targeting the element itself (e.g., h1, p).
+Attributes (Very Low): Styles targeting elements based on attributes (e.g., input[type="text"]).
+Pseudo-Classes and Pseudo-Elements: Styles targeting elements based on specific states or behaviors (e.g., :hover, ::before).

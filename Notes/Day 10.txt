@@ -1,0 +1,107 @@
+overflow: hidden (The Strict Warden): This is the no-nonsense guard. Any content that dares to extend beyond the element's borders gets ruthlessly clipped off. Useful for maintaining clean layouts and preventing unexpected content spills.
+
+overflow: scroll (The Scroll Master): This one's all about controlled chaos. When content overflows, it adds scrollbars to the element, allowing users to navigate and view the hidden content. Think of it as a tiny elevator for your content.
+
+overflow: auto (The Wise Diplomat): This is the balanced negotiator. It only enables scrollbars when content overflows in a specific direction (vertically or horizontally). It analyzes the situation and provides scrollbars only when absolutely necessary.
+
+overflow: visible (The Free Spirit): This one throws caution to the wind. Content can overflow the element's box as much as it wants, potentially causing layout issues or disrupting other elements. Use it with caution, like a seasoned developer who knows exactly what they're unleashing.
+
+ overflow-x and overflow-y to control overflow behavior for horizontal and vertical directions independently. Granular control, just like we like it.
+
+
+
+px:pixels
+em:current parent element
+rem:root parent element
+
+Pixels (px): The most common unit, representing individual dots on the screen.
+Points (pt): 1pt = 1/72 inch, often used for font sizes.
+Ems (em): Relative to the font size of the parent element. 1em = current font size.
+Rems (rem): Similar to ems but relative to the root font size (usually the html element).
+Percentages (%): Relative to the containing element's width or height.
+Viewport units (vh, vw): Relative to the viewport (browser window) size. 1vh = 1% of viewport height.
+
+Use px for fixed layouts or pixel-perfect designs.
+Use em or rem for flexible layouts that scale with font size changes.
+Use % for responsive design elements that adapt to different screen sizes.
+Use vh and vw for elements that should scale relative to the viewport size 
+
+
+snippet:
+rem:
+html{
+font-size:24px;}root element is 24px
+p{
+font-size:1 rem}1 rem=24px;
+
+em:
+<style>
+    html{
+         font-size:24px;}
+    p{
+         font-size:2em}1em =50px.
+    </style>
+</head>
+<body>
+    <div style="font-size: 50px;">
+       <p>This is to check overflow properties,scroll,hidden,auto,visible.</p>
+    </div>
+</body>
+</html>
+
+
+A drop shadow is a visual effect that creates the illusion of an element being slightly lifted off the background, casting a shadow beneath it. It adds depth and dimension, making elements appear more realistic and visually appealing.
+
+How to achieve it with CSS:
+
+CSS provides the box-shadow property to create drop shadows. It takes multiple values to define different aspects of the shadow:
+
+Offset: How far the shadow is horizontally and vertically displaced from the element. (e.g., 5px 10px)
+Blur: How blurry the shadow is. (e.g., 5px)
+Spread: How much the shadow is enlarged beyond its blurry area. (e.g., 2px)
+Color: The color of the shadow. (e.g., rgba(0, 0, 0, 0.5)) - rgba allows for transparency (0.5 = 50% opacity)
+Syntax:
+
+CSS
+element {
+  box-shadow: offsetX offsetY blur spread color;
+}
+Use code with caution.
+content_copy
+Example:
+
+CSS
+.button {
+  box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.3);
+}
+Use code with caution.
+content_copy
+This example creates a drop shadow for the .button element with:
+
+Horizontal offset: 2px
+Vertical offset: 4px
+Blur: 5px
+Color: Black with 30% transparency
+
+
+
+Imagine a website that looks perfect on your desktop computer but becomes unusable on your phone. That's where media queries come in! They are like magic spells in CSS that allow you to create websites that adapt to different screen sizes and devices.
+
+Here's how it works:
+
+You use the @media rule to define a condition, like when the screen is narrower than a certain width.
+Inside the rule, you specify the styles you want to apply for that specific screen size.
+Example:
+
+CSS
+/* Styles for all screens */
+body {
+  font-size: 16px;
+}
+
+/* Styles for screens narrower than 768px */
+@media only screen and (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+}

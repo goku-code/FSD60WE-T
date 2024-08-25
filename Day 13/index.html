@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 13</title>
+</head>
+<body>
+    <h1 class="heading">Hi</h1>
+    <script>
+        const h1tag=document.body.getElementsByTagName("h1");
+        const h1class=document.getElementsByClassName("heading");
+        const tag=document.querySelectorAll("p");
+        const newel=document.createElement("p");
+        newel.setAttribute("id","para1");
+        document.body.appendChild(newel);
+        newel.innerHTML=" some paragraph";
+        setTimeout(()=>{
+            h1tag[0].innerText="Welcome Everyone";
+            tag[0].innerText="Hello world";
+            setTimeout(()=>{
+        h1class[0].innerText="All the Best";
+        setTimeout(()=>{
+        h1class[0].style.color="blue";
+        },5000) },5000)
+    },5000);
+    </script>
+</body>
+</html>

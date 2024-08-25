@@ -1,0 +1,51 @@
+Here's a comprehensive explanation of the DOM topics covered in the Day 1 schedule:
+1. Document
+The Document object represents the entire HTML document and serves as the entry point for interacting with the DOM. It provides methods and properties to access and manipulate elements, create new elements, and handle events.
+2. createElement
+document.createElement(tagName) creates a new HTML element with the specified tagName. For example, document.createElement('div') creates a new <div> element.
+3. setAttribute
+element.setAttribute(attributeName, value) sets an attribute on an element. For example, element.setAttribute('id', 'myId') sets the id attribute of the element to 'myId'.
+4. getElementById
+document.getElementById(id) returns the element with the specified id. For example, document.getElementById('myId') returns the element with the id 'myId'.
+5. querySelector vs querySelectorAll
+document.querySelector(selector) returns the first element that matches the specified CSS selector.
+document.querySelectorAll(selector) returns a NodeList of all elements that match the specified CSS selector.
+6. innerHTML vs innerText
+element.innerHTML sets or gets the HTML content of an element, including tags and text.
+element.innerText sets or gets the text content of an element, without including HTML tags.
+7. appendChild vs append
+element.appendChild(child) adds a child element to the end of the parent element's child nodes.
+element.append(...nodes) adds one or more child elements to the end of the parent element's child nodes (note: append is not supported in older browsers).
+Example:
+JavaScript
+// Create a new div element
+const newDiv = document.createElement('div');
+
+// Set its id attribute
+newDiv.setAttribute('id', 'myNewDiv');
+
+// Get an existing element by id
+const existingElement = document.getElementById('myId');
+
+// Add the new div as a child of the existing element
+existingElement.appendChild(newDiv);
+
+// Alternatively, using append
+existingElement.append(newDiv);
+To impress the interviewer, be prepared to:
+Provide clear and concise explanations
+Use examples to demonstrate each concept
+Show understanding of use cases and potential pitfalls
+Highlight any browser compatibility issues
+Demonstrate ability to write clean and efficient code
+
+
+
+
+parser:
+Render:Web page
+html parser->tokens->nodetree->DOMtree->render
+Css parser->Rules->CSSOM tree->DOMtree->render
+
+
+Remember to practice explaining these concepts in a clear and concise manner, and you'll be well-prepared for the interview!
